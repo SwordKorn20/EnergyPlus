@@ -1,4 +1,4 @@
-<img src="https://github.com/abused/EnergyPlus/blob/master/Energy.png">
+<img src="https://github.com/abused/EnergyPlus/blob/master/logo.jpg">
 
 <b>Welcome to the EnergyPlus repository.</b>
 
