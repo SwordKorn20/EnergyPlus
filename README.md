@@ -1,4 +1,4 @@
-Welcome to the EnergyPlus repository.
+<b>Welcome to the EnergyPlus repository.</b>
 
 EnergyPlus is a Minecraft "Tech" mod which is used for things like:
 Generating RF
