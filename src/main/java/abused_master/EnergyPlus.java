@@ -50,7 +50,7 @@ public class EnergyPlus {
 	        @Override
 	        public Item getTabIconItem()
 	        {
-	            return Items.diamond;
+	            return Items.DIAMOND;
 	        }
 	        
 	    };

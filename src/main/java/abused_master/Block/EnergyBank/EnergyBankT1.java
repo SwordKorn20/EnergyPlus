@@ -25,7 +25,7 @@ public class EnergyBankT1 extends Block {
 	}
 
     public EnergyBankT1(String unlocalisedName) {
-        this(Material.iron, unlocalisedName);
+        this(Material.IRON, unlocalisedName);
     }
     
 	@Override
