@@ -39,27 +39,29 @@ public class TileEnergyBankT1 extends TileEntity implements IEnergyProvider, IEn
 	
 	@Override
 	public int getEnergyStored(EnumFacing from) {
-		return 0;
+		return storage.getEnergyStored();
 	}
 
 	@Override
 	public int getMaxEnergyStored(EnumFacing from) {
-		return 0;
+		return storage.getMaxEnergyStored();
 	}
 
 	@Override
 	public boolean canConnectEnergy(EnumFacing from) {
-		return false;
+		return true;
 	}
 
 	@Override
 	public int receiveEnergy(EnumFacing from, int maxReceive, boolean simulate) {
-		return 0;
+		maxReceive = 320;
+		return storage.receiveEnergy(maxReceive, simulate);
 	}
 
 	@Override
 	public int extractEnergy(EnumFacing from, int maxExtract, boolean simulate) {
-		return 0;
+		maxExtract = 400;
+		return storage.extractEnergy(maxExtract, simulate);
 	}
 	
 }
