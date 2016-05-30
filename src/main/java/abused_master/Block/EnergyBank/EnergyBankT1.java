@@ -49,7 +49,7 @@ public class EnergyBankT1 extends BlockContainer {
 	
 	@Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
-		player.addChatMessage(new TextComponentString("Energy Stored /* + storage.getEnergyStored() + / + storage.getMaxEnergyStored() + */RF"));
+		player.addChatMessage(new TextComponentString("Energy Stored: " + TileEnergyBankT1.getEnergyStored() + "/" + TileEnergyBankT1.getMaxEnergyStored() + "RF"));
 
 		return true;
 	}	
