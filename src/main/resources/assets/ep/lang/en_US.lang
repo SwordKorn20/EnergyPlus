@@ -1,1 +1,7 @@
-itemGroup.EnergyPlus=Energy+
+tile.EnergyBankT1.name=Energy Bank T1
+tile.EnergyBankT2.name=Energy Bank T2
+tile.EnergyBankT3.name=Energy Bank T3
+
+item.Wrench.name=Wrench
+
+itemGroup.EnergyPlus=EnergyPlus

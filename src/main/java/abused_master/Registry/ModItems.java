@@ -1,14 +1,16 @@
 package abused_master.Registry;
 
-import net.minecraft.creativetab.CreativeTabs;
+import abused_master.Item.Wrench;
+import net.minecraft.item.Item;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModItems {
 		
-	//public static Item CertusQuartz = new CertusQuartz();
+	public static Item Wrench= new Wrench();
 	
 	public static void init() {
 	
-		//GameRegistry.register(CertusQuartz.setRegistryName("CertusQuartz"));
+		GameRegistry.register(Wrench.setRegistryName("Wrench"));
 
     }
 

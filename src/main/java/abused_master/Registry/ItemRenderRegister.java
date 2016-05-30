@@ -12,7 +12,7 @@ public class ItemRenderRegister {
 
 	public static void registerItemRenderer() {
 		
-		//reg(NetworkItems.CertusQuartz, 0, "inventory");
+		reg(ModItems.Wrench, 0, "inventory");
 		
 	}
 	

@@ -1,6 +1,7 @@
 package abused_master;
 
 import abused_master.Proxy.CommonProxy;
+import abused_master.Registry.ModItems;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -50,7 +51,7 @@ public class EnergyPlus {
 	        @Override
 	        public Item getTabIconItem()
 	        {
-	            return Items.DIAMOND;
+	            return ModItems.Wrench;
 	        }
 	        
 	    };
