@@ -9,7 +9,9 @@ public class ModBlocks {
 
 
 	public static Block EnergyBankT1 = new EnergyBankT1("EnergyBankT1");
-	
+	public static Block EnergyBankT2 = new EnergyBankT1("EnergyBankT2");
+	public static Block EnergyBankT3 = new EnergyBankT1("EnergyBankT3");
+
 	public static void init()
 	{
 
@@ -18,12 +20,16 @@ public class ModBlocks {
 		 */
 		
 		GameRegistry.register(EnergyBankT1.setRegistryName("EnergyBankT1"));
-		
+		GameRegistry.register(EnergyBankT2.setRegistryName("EnergyBankT2"));
+		GameRegistry.register(EnergyBankT3.setRegistryName("EnergyBankT3"));
+
 		/*
 		 * Register ItemBlocks
 		 */
 		
 		GameRegistry.register(new BaseItemBlock(EnergyBankT1).setRegistryName(EnergyBankT1.getRegistryName()));
+		GameRegistry.register(new BaseItemBlock(EnergyBankT2).setRegistryName(EnergyBankT2.getRegistryName()));
+		GameRegistry.register(new BaseItemBlock(EnergyBankT3).setRegistryName(EnergyBankT3.getRegistryName()));
 
 
 	}
