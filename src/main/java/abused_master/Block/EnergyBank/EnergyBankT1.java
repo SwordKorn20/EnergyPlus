@@ -36,5 +36,6 @@ public class EnergyBankT1 extends BlockContainer {
 	@Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
 		Minecraft.getMinecraft().thePlayer.sendChatMessage("Energy Stored: 0/1,000,000 RF");
-	
+		return true;
+	}	
 }
