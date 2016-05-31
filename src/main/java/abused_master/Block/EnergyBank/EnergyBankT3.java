@@ -46,9 +46,7 @@ public class EnergyBankT3 extends BlockContainer {
 	}
 	@Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
-		//Minecraft.getMinecraft().thePlayer.addChatMessage(new TextComponentString("Energy Stored " + TileEnergyBankT1.getEnergyStored + "/" + TileEnergyBankT1.EnergyStorage + " RF"));
-		player.addChatMessage(new TextComponentString("Energy Stored /* + storage.getEnergyStored() + / + storage.getMaxEnergyStored() + */RF"));
-
+		player.addChatMessage(new TextComponentString("Energy Stored:"));
 		return true;
 	}	
 }

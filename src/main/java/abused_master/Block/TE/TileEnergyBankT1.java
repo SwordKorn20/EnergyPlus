@@ -20,7 +20,7 @@ import net.minecraftforge.fml.common.eventhandler.Event;
 public class TileEnergyBankT1 extends TileEntity implements IEnergyProvider, IEnergyReceiver {
 
 
-	protected EnergyStorage storage = new EnergyStorage(1000000);
+	protected EnergyStorage storage = new EnergyStorage(500000);
 
 	@Override
 	public void readFromNBT(NBTTagCompound nbt) {
@@ -54,11 +54,13 @@ public class TileEnergyBankT1 extends TileEntity implements IEnergyProvider, IEn
 
 	@Override
 	public int receiveEnergy(EnumFacing from, int maxReceive, boolean simulate) {
+		maxReceive = 5000;
 		return storage.receiveEnergy(maxReceive, simulate);
 	}
 
 	@Override
 	public int extractEnergy(EnumFacing from, int maxExtract, boolean simulate) {
+		maxExtract = 5000;
 		return storage.extractEnergy(maxExtract, simulate);
 	}
 	
