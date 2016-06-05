@@ -1,6 +1,7 @@
 package abused_master.Block.EnergyBank;
 
 import abused_master.EnergyPlus;
+import abused_master.Block.TE.TileEnergyBankT1;
 import abused_master.Block.TE.TileEnergyBankT2;
 import abused_master.Block.TE.TileEnergyBankT3;
 import net.minecraft.block.BlockContainer;
@@ -44,9 +45,20 @@ public class EnergyBankT3 extends BlockContainer {
 	public TileEntity createNewTileEntity(World worldIn, int meta) {
 		return new TileEnergyBankT3();
 	}
+	
 	@Override
-    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
-		player.addChatMessage(new TextComponentString("Energy Stored:"));
+	public boolean hasTileEntity() {
+		return true;
+	}
+	
+	@Override
+    public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
+
+		TileEntity te = world.getTileEntity(pos);
+		
+        TileEnergyBankT3 ebt3 = (TileEnergyBankT3)te;
+
+		player.addChatMessage(new TextComponentString("Energy Stored: " + ebt3.getEnergyStored(side) + "/" + ebt3.getMaxEnergyStored(side) + "RF"));
 		return true;
 	}	
 }

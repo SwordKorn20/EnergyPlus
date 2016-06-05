@@ -43,10 +43,23 @@ public class EnergyBankT2 extends BlockContainer {
 	
 	public TileEntity createNewTileEntity(World worldIn, int meta) {
 		return new TileEnergyBankT2();
+		
 	}
+	
 	@Override
-    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
-		player.addChatMessage(new TextComponentString("Energy Stored:"));
+	public boolean hasTileEntity() {
+		return true;
+	}
+	
+	
+	@Override
+    public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
+
+		TileEntity tee = world.getTileEntity(pos);
+		
+        TileEnergyBankT2 ebt2 = (TileEnergyBankT2)tee;
+
+		player.addChatMessage(new TextComponentString("Energy Stored: " + ebt2.getEnergyStored(side) + "/" + ebt2.getMaxEnergyStored(side) + " RF") );
 		return true;
 	}	
 }

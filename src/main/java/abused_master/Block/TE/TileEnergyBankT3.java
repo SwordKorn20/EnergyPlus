@@ -3,6 +3,7 @@ package abused_master.Block.TE;
 import cofh.api.energy.EnergyStorage;
 import cofh.api.energy.IEnergyProvider;
 import cofh.api.energy.IEnergyReceiver;
+import net.minecraft.client.renderer.texture.ITickable;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
@@ -54,4 +55,5 @@ public class TileEnergyBankT3 extends TileEntity implements IEnergyProvider, IEn
 		maxExtract = 50000;
 		return storage.extractEnergy(maxExtract, simulate);
 	}
+
 }
