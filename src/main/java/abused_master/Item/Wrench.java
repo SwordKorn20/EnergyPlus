@@ -35,7 +35,7 @@ public class Wrench extends Item implements IToolWrench {
 		this.setCreativeTab(EnergyPlus.EnergyPlus);
 		this.setUnlocalizedName("Wrench");
 	}
-	            
+/*	            
 	@Override
 	public EnumActionResult onItemUseFirst(ItemStack stack, EntityPlayer player, World world, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ, EnumHand hand) {
 	    final IBlockState blockState = world.getBlockState(pos);
@@ -67,7 +67,7 @@ public class Wrench extends Item implements IToolWrench {
 	    return ret ? EnumActionResult.SUCCESS: EnumActionResult.PASS;	    	
 	    }
 		      
-		      
+	*/	      
 	        
 
 	@Override

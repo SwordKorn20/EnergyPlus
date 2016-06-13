@@ -58,7 +58,7 @@ public class EnergyBankT3 extends BlockContainer {
 		
         TileEnergyBankT3 ebt3 = (TileEnergyBankT3)te;
 
-		player.addChatMessage(new TextComponentString("Energy Stored: " + ebt3.getEnergyStored(side) + "/" + ebt3.getMaxEnergyStored(side) + "RF"));
+		player.addChatMessage(new TextComponentString("Energy Stored: " + ebt3.getEnergyStored(side) + "/" + ebt3.getMaxEnergyStored(side) + " RF"));
 		return true;
 	}	
 }
