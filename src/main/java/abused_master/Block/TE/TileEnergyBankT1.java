@@ -18,11 +18,9 @@ import net.minecraftforge.fml.common.eventhandler.Event;
 
 public class TileEnergyBankT1 extends TileEntity implements IEnergyProvider, IEnergyReceiver {
 	
-	public int capacity = 500000;
-	public int maxReceive = 5000;
-	public int maxExtract = 5000;
-	int energy;
-	//test
+	protected EnergyStorage capacity = new EnergyStorage(500000);
+	private int maxReceive = 5000;
+	private int maxExtract = 5000;
 	
 	public TileEnergyBankT1(int capacity, int maxReceive, int maxExtract) {
 		
@@ -30,24 +28,20 @@ public class TileEnergyBankT1 extends TileEntity implements IEnergyProvider, IEn
 		  this.maxReceive = maxReceive;
 		  this.maxExtract = maxExtract;
 		  
-		 }
-	
-	public TileEnergyBankT1() {
-		
 	}
 	
 	@Override
 	public void readFromNBT(NBTTagCompound nbt) {
 
 		super.readFromNBT(nbt);
-		this.readFromNBT(nbt);
+		capacity.readFromNBT(nbt);
 	}
 
 	@Override
 	public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
 
 		super.writeToNBT(nbt);
-		this.writeToNBT(nbt);
+		capacity.writeToNBT(nbt);
 		return nbt;
 	}
 	
@@ -58,7 +52,7 @@ public class TileEnergyBankT1 extends TileEntity implements IEnergyProvider, IEn
 
 	@Override
 	public int getMaxEnergyStored(EnumFacing from) {
-		return capacity;
+		return capacity.getEnergyStored();
 	}
 
 	@Override
@@ -68,12 +62,12 @@ public class TileEnergyBankT1 extends TileEntity implements IEnergyProvider, IEn
 
 	@Override
 	public int receiveEnergy(EnumFacing from, int maxReceive, boolean simulate) {
-		return this.receiveEnergy(from, maxReceive, simulate);
+		return capacity.receiveEnergy(this.maxReceive, simulate);
 		}
 
 	@Override
 	public int extractEnergy(EnumFacing from, int maxExtract, boolean simulate) {
-	    return this.extractEnergy(from, maxExtract, simulate);
+	    return capacity.extractEnergy(this.maxExtract, simulate);
 	}
 	
 }
