@@ -22,6 +22,7 @@ public class TileEnergyBankT1 extends TileEntity implements IEnergyProvider, IEn
 	public int maxReceive = 5000;
 	public int maxExtract = 5000;
 	int energy;
+	//test
 	
 	public TileEnergyBankT1(int capacity, int maxReceive, int maxExtract) {
 		
