@@ -17,17 +17,18 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.common.eventhandler.Event;
 
 public class TileEnergyBankT1 extends TileEntity implements IEnergyProvider, IEnergyReceiver {
-
-	int capacity;
-	int maxReceive;
-	int maxExtract;
+	
+	public int capacity = 500000;
+	public int maxReceive = 5000;
+	public int maxExtract = 5000;
 	int energy;
 	
 	public TileEnergyBankT1(int capacity, int maxReceive, int maxExtract) {
-
-		  this.capacity = 500000;
-		  this.maxReceive = 5000;
-		  this.maxExtract = 5000;
+		
+		  this.capacity = capacity;
+		  this.maxReceive = maxReceive;
+		  this.maxExtract = maxExtract;
+		  
 		 }
 	
 	public TileEnergyBankT1() {
@@ -66,13 +67,12 @@ public class TileEnergyBankT1 extends TileEntity implements IEnergyProvider, IEn
 
 	@Override
 	public int receiveEnergy(EnumFacing from, int maxReceive, boolean simulate) {
-		return maxReceive;		
-		
-	}
+		return this.receiveEnergy(from, maxReceive, simulate);
+		}
 
 	@Override
 	public int extractEnergy(EnumFacing from, int maxExtract, boolean simulate) {
-		return this.extractEnergy(from.EAST, maxExtract, simulate);
+	    return this.extractEnergy(from, maxExtract, simulate);
 	}
 	
 }
